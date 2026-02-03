@@ -17,7 +17,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
-import net.iessochoa.joseantoniolopez.t14_firebase.R
+import net.iessochoa.sergiocontreras.texaspokertrainer.R
+
 /**
  * Composable que representa un campo de texto para ingresar contraseñas.
  * Incluye un ícono representativo a la izquierda y una funcionalidad para mostrar u ocultar la contraseña.
@@ -56,9 +57,9 @@ fun PasswordOutLinedTextField(
         // Ícono interactivo para alternar la visibilidad de la contraseña en el lado derecho
         trailingIcon = {
             val image = if (isPasswordVisible)
-                ImageVector.vectorResource(id = R.drawable.ic_visibility_off) // Ícono "ocultar contraseña"
+                ImageVector.vectorResource(id = R.drawable.ic_launcher_background) // Ícono "ocultar contraseña" TODO cambiar por el icono de ocultar
             else
-                ImageVector.vectorResource(id = R.drawable.ic_visibility) // Ícono "mostrar contraseña"
+                ImageVector.vectorResource(id = R.drawable.ic_launcher_foreground) // Ícono "mostrar contraseña" TODO cambiar por el icono de mostrar
 
             val description = if (isPasswordVisible) "Ocultar contraseña" else "Mostrar contraseña"
 
