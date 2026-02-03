@@ -38,6 +38,7 @@ import net.iessochoa.joseantoniolopez.t14_firebase.ui.auth.components.esCorrecto
  */
 @Composable
 fun LoginScreen(
+    modifier: Modifier = Modifier,
     onBack: () -> Unit = {}, // Acción por defecto para el botón "Atrás"
     onLoginSuccess: () -> Unit = {}, // Acción por defecto para el éxito en el inicio de sesión
     viewModel: AuthViewModel = viewModel(), // ViewModel para la autenticación

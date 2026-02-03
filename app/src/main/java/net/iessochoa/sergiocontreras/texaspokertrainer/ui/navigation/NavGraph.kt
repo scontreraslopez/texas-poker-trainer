@@ -1,6 +1,7 @@
 package net.iessochoa.joseantoniolopez.t14_firebase.ui.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -12,7 +13,9 @@ import net.iessochoa.joseantoniolopez.t14_firebase.ui.auth.starup.StarUpScreen
 import net.iessochoa.joseantoniolopez.t14_firebase.ui.principalscreen.PrincipalScreen
 
 @Composable
-fun AppNavigation() {
+fun AppNavigation(
+    modifier: Modifier = Modifier
+) {
     val navController = rememberNavController()
     //lambda que nos permite navegar a la pantalla Principal de la App una vez se haya logueado
     val onLogin_RegistroExitoso = {

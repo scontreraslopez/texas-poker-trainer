@@ -1,6 +1,10 @@
 package net.iessochoa.joseantoniolopez.t14_firebase.data.repository
 
+import kotlinx.serialization.json.Json
 import net.iessochoa.joseantoniolopez.t14_firebase.data.firebase.AutenticacionFireBase
+import okhttp3.MediaType.Companion.toMediaType
+import retrofit2.Retrofit
+
 /**
  * Objeto Repository que actúa como una capa de abstracción para interactuar con el objeto AutenticacionFireBase.
  * Proporciona métodos suspendidos para las operaciones de autenticación y gestión del usuario actual.
@@ -46,6 +50,30 @@ object Repository {
         AutenticacionFireBase.resetPassword(email)
 
     fun estaLogueado()=AutenticacionFireBase.estaLogueado()
+
+
+    private val baseUrl = "https://www.deckofcardsapi.com/api/"
+
+    //Empezamos a inicializar primero Retrofit, siempre lazy.
+    private val retrofit: Retrofit by lazy {
+        Retrofit.Builder()
+            .addConverterFactory(Json {
+                ignoreUnknownKeys = true
+                coerceInputValues = true
+            }.asConverterFactory("application/json".toMediaType()))
+            .baseUrl(baseUrl)
+            .build()
+    }
+
+    private val retrofitService: RickAndMortyApiService by lazy {
+        retrofit.create(RickAndMortyApiService::class.java)
+    }
+
+    suspend fun getCharacters() = retrofitService.getCharacters()
+
+
+
+
 
 }
 

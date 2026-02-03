@@ -35,6 +35,11 @@ android {
     buildFeatures {
         compose = true
     }
+
+}
+
+kotlin {
+    jvmToolchain(17)
 }
 
 dependencies {
@@ -67,6 +72,13 @@ dependencies {
     //Firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.auth)
+
+    implementation(libs.firebase.analytics)
+
+
+    implementation(libs.retrofit)
+    implementation(libs.kotlinx.serialization.json)
+
 
 
 }
