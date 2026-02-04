@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="net.iessochoa.sergiocontreras.texaspokertrainer" />
+                  <option name="mobileSdkAppId" value="1:592930483495:android:2c88856eeeb51676338d02" />
+                  <option name="projectId" value="texas-poker-trainer" />
+                  <option name="projectNumber" value="592930483495" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

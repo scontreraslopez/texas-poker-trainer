@@ -79,6 +79,9 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.kotlinx.serialization.json)
 
+    // Source: https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-kotlinx-serialization
+    implementation(libs.converter.kotlinx.serialization)
+
 
 
 }

@@ -4,6 +4,7 @@ import kotlinx.serialization.json.Json
 import net.iessochoa.joseantoniolopez.t14_firebase.data.firebase.AutenticacionFireBase
 import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.Retrofit
+import retrofit2.converter.kotlinx.serialization.asConverterFactory
 
 /**
  * Objeto Repository que actúa como una capa de abstracción para interactuar con el objeto AutenticacionFireBase.
@@ -65,12 +66,13 @@ object Repository {
             .build()
     }
 
+    /*
     private val retrofitService: RickAndMortyApiService by lazy {
         retrofit.create(RickAndMortyApiService::class.java)
     }
 
     suspend fun getCharacters() = retrofitService.getCharacters()
-
+    */
 
 
 
